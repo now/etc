@@ -1,0 +1,24 @@
+# contents: Xinetd(8) service for ftp using Pure-FTPd.
+#
+# Copyright © 2006 Nikolai Weibull <now@bitwi.se>
+# 
+# The setup is as follows:
+#
+# • A maximum of two connections per user
+# • Don’t allow anonymous connections
+# • Create user’s home-directories, if they don’t exist already
+# • Prevent uploads if hard-drive is more than 90 percent full
+# • Allow users to resume and upload files, but not remove files
+# • Use /etc/pureftpd/accounts.pdb as passwd file
+# • Enable support for the FXP protocol
+# • Only allow connections over SSL/TLS
+
+service ftp 
+{ 
+        socket_type     = stream 
+        server          = /usr/sbin/pure-ftpd
+        server_args     = -C2 -E -j -k90% -K -lpuredb:/etc/pureftpd/accounts.pdb -w -Y2
+        only_from       = 0.0.0.0/0
+        user            = root
+        wait            = no
+}

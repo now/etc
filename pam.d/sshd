@@ -1,0 +1,11 @@
+#%PAM-1.0
+
+#auth       include	system-auth
+auth       required     pam_stack.so service=system-auth 
+auth       required     pam_shells.so
+auth	   required	pam_nologin.so
+auth	   optional	pam_mount.so use_first_pass
+account    include	system-auth
+password   include	system-auth
+session	   include	system-auth
+session    optional	pam_mount.so

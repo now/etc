@@ -1,0 +1,6 @@
+# contents: List of locales to build when installig glibc.
+#
+# Copyright © 2006 Nikolai Weibull <now@bitwi.se>
+
+en_US.UTF-8 UTF-8
+lt_LT.UTF-8 UTF-8

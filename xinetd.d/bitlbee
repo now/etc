@@ -1,0 +1,7 @@
+service ircd
+{
+        socket_type     = stream
+        wait            = no
+        user            = nobody
+        server          = /usr/sbin/bitlbee
+}

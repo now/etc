@@ -1,0 +1,18 @@
+# contents: ALSA module setup.
+#
+# Copyright © 2006 Nikolai Weibull <now@bitwi.se>
+
+# Generic settings.
+alias char-major-116 snd
+alias char-major-14 soundcore
+options snd cards_limit=2
+
+# The first card is a ... based on the ICE-1724 board.
+alias snd-card-0 snd-ice1724
+alias sound-slot-0 snd-card-0
+options snd-ice1724 index=0
+
+# The second card is an on-board VIA82xx-based “card”.
+alias snd-card-1 snd-via82xx
+alias sound-slot-1 snd-card-1
+options snd-via82xx index=1

@@ -1,0 +1,33 @@
+sys-apps/gawk xml
+sys-libs/glibc userlocales
+media-video/mplayer amr -gtk vorbis aalib libcaca mad xvid
+media-sound/lame -gtk
+dev-util/git doc gitsendemail tcltk -gtk
+app-editors/vim vim-with-x
+media-libs/gd fontconfig
+app-shells/zsh cap
+app-misc/beagle firefox
+x11-libs/cairo glitz pdf
+mail-client/mutt smime
+app-crypt/gpgme smime
+net-im/bitlbee msn oscar
+net-irc/irssi perl
+dev-libs/libxml2 python
+www-client/mozilla-firefox mozdevelop
+dev-lang/ruby doc
+app-editors/emacs-cvs -spell
+app-cdr/cdrdao -gnome
+media-libs/win32codecs real
+dev-ruby/rails mysql sqlite3
+app-editors/emacs xft
+media-gfx/gimp aalib lcms svg
+media-sound/sox mad ogg
+app-text/evince dvi
+media-sound/audacity mad vorbis
+app-text/docbook-sgml-utils tetex
+net-misc/neon expat
+dev-python/pycrypto gmp
+sys-fs/reiser4progs debug
+media-video/vlc aalib ffmpeg flac libcaca ogg screen stream vcd xml
+x11-terms/xterm paste64
+dev-java/blackdown-jre browserplugin mozilla nsplugin

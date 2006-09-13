@@ -1,0 +1,14 @@
+# contents: Static lookup-table for hostnames.
+#
+# Copyright © 2006 Nikolai Weibull <now@bitwi.se>
+
+127.0.0.1	puritan.pcp.ath.cx      puritan localhost
+
+# IPV6 versions of localhost & co.
+::1 ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+

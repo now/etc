@@ -1,0 +1,24 @@
+# contents: Local mail-alias database.
+#
+# Copyright © 2006 Nikolai Weibull <now@bitwi.se>
+
+# Basic system aliases – these /must/ be present.
+MAILER-DAEMON:      postmaster
+postmaster:         root
+
+# General redirections for pseudo accounts.
+adm:                root
+bin:                root
+daemon:             root
+exim:               root
+lp:                 root
+mail:               root
+named:              root
+nobody:             root
+postfix:            root
+
+# As root rarely reads his mail, redirect it to one who does, namely me!
+root:               now
+
+# I prefer to read my mail at the following address, not locally.
+now:                now@bitwi.se
