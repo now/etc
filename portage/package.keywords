@@ -1,18 +1,18 @@
 app-admin/eselect
 app-admin/eselect-opengl
 app-editors/emacs-cvs
-app-editors/vim
-app-editors/vim-core
 app-emulation/emul-linux-x86-medialibs
 app-misc/beagle
 app-text/evince
 app-text/gnome-doc-utils
 app-text/poppler
-app-text/poppler
+app-text/poppler-data
 app-text/poppler-bindings
 app-text/xpdf
-app-vim/gentoo-syntax
-app-vim/vim-spell-en
+#app-editors/vim
+#app-editors/vim-core
+#app-vim/gentoo-syntax
+#app-vim/vim-spell-en
 dev-dotnet/art-sharp
 dev-dotnet/gconf-sharp
 dev-dotnet/gecko-sharp
@@ -137,7 +137,7 @@ dev-libs/9libs
 sys-apps/slocate
 x11-drivers/ati-drivers
 net-misc/neon
-app-editors/gvim
+#app-editors/gvim
 dev-util/subversion
 dev-util/darcs
 media-sound/cmus
@@ -168,3 +168,4 @@ sys-devel/autoconf
 sys-devel/autoconf-wrapper
 sys-devel/m4
 dev-ruby/rspec
+x11-plugins/noscript

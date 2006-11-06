@@ -13,7 +13,7 @@ app-crypt/gpgme smime
 net-im/bitlbee msn oscar
 net-irc/irssi perl
 dev-libs/libxml2 python
-www-client/mozilla-firefox mozdevelop
+www-client/mozilla-firefox mozdevelop mozbranding restrict-javascript xforms
 dev-lang/ruby doc
 app-editors/emacs-cvs -spell
 app-cdr/cdrdao -gnome
@@ -22,7 +22,7 @@ dev-ruby/rails mysql sqlite3
 app-editors/emacs xft
 media-gfx/gimp aalib lcms svg
 media-sound/sox mad ogg
-app-text/evince dvi
+app-text/evince dvi -gnome
 media-sound/audacity mad vorbis
 app-text/docbook-sgml-utils tetex
 net-misc/neon expat
