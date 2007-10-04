@@ -44,7 +44,6 @@ systemconfdir = /etc
 ETCDIRS = \
 	  X11 \
 	  defaults \
-	  fonts \
 	  mail \
 	  modules.d \
 	  pam.d \
@@ -60,7 +59,6 @@ ETCFILES ?= \
 	    asound.conf \
 	    defaults/cdrdao \
 	    etc-update.conf \
-	    fonts/local.conf \
 	    fstab \
 	    hosts \
 	    locale.gen \
@@ -72,6 +70,7 @@ ETCFILES ?= \
 	    portage/package.unmask \
 	    portage/package.use \
 	    postfix/main.cf \
+	    postfix/master.cf \
 	    screenrc \
 	    security/pam_mount.conf \
 	    syslog-ng/syslog-ng.conf \
