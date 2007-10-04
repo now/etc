@@ -2,6 +2,8 @@ service ircd
 {
         socket_type     = stream
         wait            = no
+        only_from       = 127.0.0.1
+        bind            = 127.0.0.1
         user            = nobody
         server          = /usr/sbin/bitlbee
 }
