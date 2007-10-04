@@ -65,6 +65,7 @@ ETCFILES ?= \
 	    mail/aliases \
 	    make.conf \
 	    modules.d/alsa \
+	    pam.d/sshd \
 	    portage/package.keywords \
 	    portage/package.unmask \
 	    portage/package.use \
@@ -77,11 +78,17 @@ ETCFILES ?= \
 	    xinetd.d/pure-ftpd \
 	    zsh/zshenv
 
+SECRETETCDIRS =
+
+SECRETETCFILES ?= \
+		  denyhosts.conf
+
 BINDIRS = \
 	  X11/Sessions
 
 BINFILES ?= \
 	    X11/Sessions/ratpoison
 
+$(eval $(call GROUP_template,$(systemconfdir),,$(SECRETETCDIRS),$(SECRETETCFILES),600))
 $(eval $(call GROUP_template,$(systemconfdir),,$(ETCDIRS),$(ETCFILES),644))
 $(eval $(call GROUP_template,$(systemconfdir),,$(BINDIRS),$(BINFILES),755))
