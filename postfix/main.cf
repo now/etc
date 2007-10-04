@@ -3,8 +3,5 @@
 # Copyright © 2004,2005,2006 Nikolai Weibull <now@bitwi.se>
 
 delay_warning_time = 4h
-relayhost = smtp.bredband.net
-alias_maps = hash:/etc/mail/aliases
-alias_database = hash:/etc/mail/aliases
+relayhost = mail1.comhem.se
 home_mailbox = .maildir/
-#mailbox_command = /usr/bin/procmail
