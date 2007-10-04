@@ -43,6 +43,7 @@ systemconfdir = /etc
 
 ETCDIRS = \
 	  X11 \
+	  defaults \
 	  fonts \
 	  mail \
 	  modules.d \
@@ -57,6 +58,7 @@ ETCDIRS = \
 ETCFILES ?= \
 	    X11/xorg.conf \
 	    asound.conf \
+	    defaults/cdrdao \
 	    etc-update.conf \
 	    fonts/local.conf \
 	    fstab \
