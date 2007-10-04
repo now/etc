@@ -94,3 +94,10 @@ BINFILES ?= \
 $(eval $(call GROUP_template,$(systemconfdir),,$(SECRETETCDIRS),$(SECRETETCFILES),600))
 $(eval $(call GROUP_template,$(systemconfdir),,$(ETCDIRS),$(ETCFILES),644))
 $(eval $(call GROUP_template,$(systemconfdir),,$(BINDIRS),$(BINFILES),755))
+
+aliases = $(systemconfdir)/mail/aliases
+
+install: $(aliases).db
+
+$(aliases).db: $(aliases)
+	sudo postalias $<
