@@ -1,6 +1,5 @@
 #%PAM-1.0
 
-#auth       include	system-auth
 auth       required     pam_stack.so service=system-auth 
 auth       required     pam_shells.so
 auth	   required	pam_nologin.so
