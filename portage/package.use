@@ -1,6 +1,6 @@
 sys-apps/gawk xml
 sys-libs/glibc userlocales
-media-video/mplayer amr -gtk vorbis aalib libcaca mad xvid
+media-video/mplayer amr -gtk vorbis aalib libcaca mad xvid -oss cddb dvdnav ftp rar rtc srt vidix
 media-sound/lame -gtk
 dev-util/git doc gitsendemail tcltk -gtk
 app-editors/vim vim-with-x
@@ -13,8 +13,8 @@ app-crypt/gpgme smime
 net-im/bitlbee msn oscar
 net-irc/irssi perl
 dev-libs/libxml2 python
-www-client/mozilla-firefox mozdevelop mozbranding restrict-javascript xforms
-dev-lang/ruby doc
+www-client/mozilla-firefox mozdevelop mozbranding xforms
+dev-lang/ruby doc cjk
 app-editors/emacs-cvs -spell
 app-cdr/cdrdao -gnome
 media-libs/win32codecs real
@@ -22,7 +22,7 @@ dev-ruby/rails mysql sqlite3
 app-editors/emacs xft
 media-gfx/gimp aalib lcms svg
 media-sound/sox mad ogg
-app-text/evince dvi -gnome
+app-text/evince dvi djvu -gnome
 media-sound/audacity mad vorbis
 app-text/docbook-sgml-utils tetex
 net-misc/neon expat
@@ -31,3 +31,20 @@ sys-fs/reiser4progs debug
 media-video/vlc aalib ffmpeg flac libcaca ogg screen stream vcd xml
 x11-terms/xterm paste64
 dev-java/blackdown-jre browserplugin mozilla nsplugin
+media-video/ffmpeg -oss
+media-sound/alsa-driver -oss
+media-plugins/gst-plugins -oss
+media-plugins/gst-plugins-base -oss
+app-emulation/wine -ldap
+app-text/djvu tiff
+net-misc/openssh -ldap
+net-fs/samba -ldap
+x11-libs/gtk+ tiff
+dev-dotnet/libgdiplus tiff
+x11-drivers/ati-drivers opengl
+x11-base/xorg-server aiglx
+app-editors/gvim -gnome
+net-www/mplayerplug-in divx gmedia realmedia wmp
+x11-apps/xinit minimal
+sys-apps/pciutils -zlib
+gnome-base/gnome-mount -gnome
