@@ -65,6 +65,7 @@ ETCFILES ?= \
 	    mail/aliases \
 	    make.conf \
 	    modules.d/alsa \
+	    pam.d/login \
 	    pam.d/sshd \
 	    portage/package.keywords \
 	    portage/package.unmask \
@@ -74,8 +75,8 @@ ETCFILES ?= \
 	    screenrc \
 	    security/pam_mount.conf \
 	    syslog-ng/syslog-ng.conf \
-	    xinetd.d/auth \
 	    xinetd.d/bitlbee \
+	    xinetd.d/identd \
 	    xinetd.d/pure-ftpd \
 	    zsh/zshenv
 

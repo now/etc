@@ -1,30 +1,24 @@
 #%PAM-1.0
 
 auth       required	pam_securetty.so
-# Removed for pam_mount support
-#auth       include	system-auth
-# Added for pam_mount support
-auth       required     pam_stack.so service=system-auth 
-auth       required	pam_tally.so file=/var/log/faillog onerr=succeed no_magic_root
+auth       required	pam_tally.so file=/var/log/faillog onerr=succeed
 auth       required	pam_shells.so
 auth       required	pam_nologin.so
-# Added for pam_mount support
-auth	   optional	pam_mount.so use_first_pass
+auth	   optional	pam_mount.so
+auth       include      system-auth
 
 account    required	pam_access.so
 account    include	system-auth
-account    required	pam_tally.so deny=0 file=/var/log/faillog onerr=succeed no_magic_root
+account    required	pam_tally.so file=/var/log/faillog onerr=succeed
 
 password   include	system-auth
 
+session    optional	pam_mount.so
 session    include	system-auth
-#session    required     pam_stack.so service=system-auth 
 session    required	pam_env.so
 session    optional	pam_lastlog.so
 session    optional	pam_motd.so motd=/etc/motd
 session    optional	pam_mail.so
-# Added for pam_mount support
-session    optional	pam_mount.so
 
 # If you want to enable pam_console, uncomment the following line
 # and read carefully README.pam_console in /usr/share/doc/pam*
