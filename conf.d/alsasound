@@ -1,9 +1,0 @@
-# contents: Alsasound init.d settings.
-#
-# Copyright © 2006 Nikolai Weibull <now@bitwi.se>
-
-# Restore mixer settings on start-up.
-RESTORE_ON_START="yes"
-
-# Savemixer settings on shut-down.
-SAVE_ON_STOP="yes"
