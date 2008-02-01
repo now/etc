@@ -38,6 +38,7 @@ systemconfdir = /etc
 ETCFILES ?= \
 	    X11/xorg.conf \
 	    asound.conf \
+	    conf.d/clock \
 	    conf.d/domainname \
 	    conf.d/net \
 	    defaults/cdrdao \
