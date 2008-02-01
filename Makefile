@@ -38,6 +38,7 @@ systemconfdir = /etc
 ETCFILES ?= \
 	    X11/xorg.conf \
 	    asound.conf \
+	    conf.d/net \
 	    defaults/cdrdao \
 	    etc-update.conf \
 	    fstab \
@@ -64,8 +65,8 @@ ETCFILES ?= \
 SECRETETCFILES ?= \
 		  denyhosts.conf
 
-$(call GROUP_template,$(ETCFILES),$(systemconfdir),,,600)
-$(call GROUP_template,$(SECRETETCFILES),$(systemconfdir),,,644)
+$(call GROUP_template,$(ETCFILES),$(systemconfdir),,,644)
+$(call GROUP_template,$(SECRETETCFILES),$(systemconfdir),,,600)
 
 aliases = $(systemconfdir)/mail/aliases
 

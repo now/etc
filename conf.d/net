@@ -1,3 +1,4 @@
 dns_domain_eth0="pcp.ath.cx"
 config_eth0=( "dhcp" )
 dhcpcd_eth0="-t 15"
+dns_domain_lo="pcp.ath.cx"
