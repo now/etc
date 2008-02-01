@@ -46,6 +46,7 @@ ETCFILES ?= \
 	    fstab \
 	    hosts \
 	    locale.gen \
+	    lvm/lvm.conf \
 	    mail/aliases \
 	    make.conf \
 	    modules.d/alsa \
