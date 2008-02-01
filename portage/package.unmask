@@ -18,6 +18,7 @@ dev-util/confcache
 >=dev-libs/glib-2.12
 dev-lang/ruby-cvs
 gnome-base/libgnomeui
+app-editors/emacs-cvs
 
 # The Great GNOME 2.18.0 mask
 >=app-admin/sabayon-2.18.0

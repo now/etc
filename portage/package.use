@@ -1,12 +1,12 @@
 sys-apps/gawk xml
 sys-libs/glibc userlocales
-media-video/mplayer amr -gtk vorbis aalib libcaca mad xvid -oss cddb dvdnav ftp rar rtc srt vidix
+media-video/mplayer amr -gtk vorbis aalib libcaca mad xvid -oss cddb dvdnav ftp rar rtc srt vidix lame
 media-sound/lame -gtk
-dev-util/git doc gitsendemail tcltk -gtk
+dev-util/git doc gitsendemail tcltk gtk
 app-editors/vim vim-with-x
 media-libs/gd fontconfig
 app-shells/zsh cap
-app-misc/beagle firefox
+app-misc/beagle -gtk
 x11-libs/cairo glitz pdf
 mail-client/mutt smime
 app-crypt/gpgme smime
@@ -15,7 +15,7 @@ net-irc/irssi perl
 dev-libs/libxml2 python
 www-client/mozilla-firefox mozdevelop mozbranding xforms
 dev-lang/ruby doc cjk
-app-editors/emacs-cvs -spell
+app-editors/emacs-cvs -spell xft
 app-cdr/cdrdao -gnome
 media-libs/win32codecs real
 dev-ruby/rails mysql sqlite3
@@ -39,7 +39,7 @@ app-emulation/wine -ldap
 app-text/djvu tiff
 net-misc/openssh -ldap
 net-fs/samba -ldap
-x11-libs/gtk+ tiff
+x11-libs/gtk+ tiff -vim-syntax
 dev-dotnet/libgdiplus tiff
 x11-drivers/ati-drivers opengl
 x11-base/xorg-server aiglx
@@ -48,3 +48,6 @@ net-www/mplayerplug-in divx gmedia realmedia wmp
 x11-apps/xinit minimal
 sys-apps/pciutils -zlib
 gnome-base/gnome-mount -gnome
+sys-libs/pam -vim-syntax
+dev-lang/ghc binary
+media-plugins/alsa-plugins ffmpeg jack libsamplerate
