@@ -12,8 +12,8 @@ all: diff
 define GROUP_template_file
 GROUP_diff_target := $(2).diff
 .PHONY diff: $$(GROUP_diff_target)
-$$(GROUP_diff_target): $(2) $(1)
-	@set $$^ && test "$$$$2" -ot "$$$$1" -o "$$$$2" -nt "$$$$1" && $$(DIFF) -u "$$$$2" "$$$$1" || true
+$$(GROUP_diff_target):
+	@test "$(2)" -ot "$(1)" -o "$(2)" -nt "$(1)" && $$(DIFF) -u "$(2)" "$(1)" || true
 
 install: $(2)
 $(2): $(1)
@@ -38,6 +38,7 @@ systemconfdir = /etc
 ETCFILES ?= \
 	    X11/xorg.conf \
 	    asound.conf \
+	    conf.d/domainname \
 	    conf.d/net \
 	    defaults/cdrdao \
 	    etc-update.conf \
