@@ -6,53 +6,34 @@
 
 all: diff
 
-define GROUP_strip_prefix
-$(if $(1),$(patsubst $(1)/%,%,$(2)),$(2))
-endef
+# 1: File
+# 2: Target
+# 3: Mode
+define GROUP_template_file
+GROUP_diff_target := $(2).diff
+.PHONY diff: $$(GROUP_diff_target)
+$$(GROUP_diff_target): $(2) $(1)
+	@set $$^ && test "$$$$2" -ot "$$$$1" -o "$$$$2" -nt "$$$$1" && $$(DIFF) -u "$$$$2" "$$$$1" || true
 
-define GROUP_diff_template
-GROUP_diff_target := $(1)/$(call GROUP_strip_prefix,$(2),$(3)).diff
-.PHONY: $$(GROUP_diff_target)
-diff: $$(GROUP_diff_target)
-$$(GROUP_diff_target):
-	-@$$(DIFF) -u $$(patsubst %.diff,%,$$@) $(3)
-
-endef
-
-define GROUP_install_template
-GROUP_install_target := $(1)/$(call GROUP_strip_prefix,$(2),$(3))
-install: $$(GROUP_install_target)
-$$(GROUP_install_target): $(3)
-	$$(INSTALL) --mode=$(4) $$< $$@
+install: $(2)
+$(2): $(1)
+	$$(INSTALL) -D --mode=$(if $(3),$(3),644) --preserve-timestamps "$$<" "$$@"
 
 endef
 
+# 1: Files
+# 2: Parent directory
+# 3: Prefix to add
+# 4: Prefix to strip
+# 5: Mode
 define GROUP_template
-target_DIRS := $(addprefix $(1)/,$(call GROUP_strip_prefix,$(2),$(3)))
-install: $$(target_DIRS)
-$$(target_DIRS):
-	$$(INSTALL) --directory --mode=755 $$@
-$(foreach file,$(4),$(call GROUP_diff_template,$(1),$(2),$(file)))
-$(foreach file,$(4),$(call GROUP_install_template,$(1),$(2),$(file),$(5)))
+$(eval $(foreach file,$(1),$(call GROUP_template_file,$(file),$(2)/$(3)$(file:$(4)%=%),$(5))))
 endef
 
 DIFF = diff
 INSTALL = install
 
 systemconfdir = /etc
-
-ETCDIRS = \
-	  X11 \
-	  defaults \
-	  mail \
-	  modules.d \
-	  pam.d \
-	  portage \
-	  postfix \
-	  security \
-	  syslog-ng \
-	  xinetd.d \
-	  zsh
 
 ETCFILES ?= \
 	    X11/xorg.conf \
@@ -80,20 +61,11 @@ ETCFILES ?= \
 	    xinetd.d/pure-ftpd \
 	    zsh/zshenv
 
-SECRETETCDIRS =
-
 SECRETETCFILES ?= \
 		  denyhosts.conf
 
-BINDIRS = \
-	  X11/Sessions
-
-BINFILES ?= \
-	    X11/Sessions/ratpoison
-
-$(eval $(call GROUP_template,$(systemconfdir),,$(SECRETETCDIRS),$(SECRETETCFILES),600))
-$(eval $(call GROUP_template,$(systemconfdir),,$(ETCDIRS),$(ETCFILES),644))
-$(eval $(call GROUP_template,$(systemconfdir),,$(BINDIRS),$(BINFILES),755))
+$(call GROUP_template,$(ETCFILES),$(systemconfdir),,,600)
+$(call GROUP_template,$(SECRETETCFILES),$(systemconfdir),,,644)
 
 aliases = $(systemconfdir)/mail/aliases
 
