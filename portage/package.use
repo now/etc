@@ -15,7 +15,7 @@ net-irc/irssi perl
 dev-libs/libxml2 python
 www-client/mozilla-firefox mozdevelop mozbranding xforms
 dev-lang/ruby doc cjk
-app-editors/emacs-cvs -spell xft
+app-editors/emacs-cvs -spell xft libotf
 app-cdr/cdrdao -gnome
 media-libs/win32codecs real
 dev-ruby/rails mysql sqlite3
