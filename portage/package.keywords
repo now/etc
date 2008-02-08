@@ -71,11 +71,12 @@ sys-apps/hal
 sys-apps/man
 sys-apps/pmount
 sys-apps/util-linux
+sys-auth/pam_mount
 sys-fs/cryptsetup-luks
 sys-fs/multipath-tools
 sys-fs/udev
-sys-libs/pam_mount
 sys-libs/readline
+sys-libs/libhx
 www-client/mozilla-firefox
 www-client/mozilla-launcher
 x11-apps/ati-drivers-extra
