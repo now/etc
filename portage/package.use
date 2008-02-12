@@ -5,6 +5,7 @@ media-sound/lame -gtk
 dev-util/git doc gitsendemail tcltk gtk
 app-editors/vim vim-with-x
 media-libs/gd fontconfig
+media-libs/libwmf jpeg
 app-shells/zsh cap
 app-misc/beagle -gtk
 x11-libs/cairo glitz pdf
