@@ -1,6 +1,6 @@
 sys-apps/gawk xml
 sys-libs/glibc userlocales
-media-video/mplayer amr -gtk vorbis aalib libcaca mad xvid -oss cddb dvdnav ftp rar rtc srt vidix lame
+media-video/mplayer amr -gtk vorbis aalib libcaca mad xvid -oss cddb dvdnav ftp rar rtc srt vidix lame xscreensaver 3dnow 3dnowext
 media-sound/lame -gtk
 dev-util/git doc gitsendemail tcltk gtk
 app-editors/vim vim-with-x
@@ -16,7 +16,7 @@ net-irc/irssi perl
 dev-libs/libxml2 python
 www-client/mozilla-firefox mozdevelop mozbranding xforms
 dev-lang/ruby doc cjk
-app-editors/emacs-cvs -spell xft libotf
+app-editors/emacs-cvs -spell xft libotf m17n-lib
 app-cdr/cdrdao -gnome
 media-libs/win32codecs real
 dev-ruby/rails mysql sqlite3
@@ -52,3 +52,4 @@ gnome-base/gnome-mount -gnome
 sys-libs/pam -vim-syntax
 dev-lang/ghc binary
 media-plugins/alsa-plugins ffmpeg jack libsamplerate
+media-gfx/imagemagick djvu fontconfig grahpviz
