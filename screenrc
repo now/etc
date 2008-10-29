@@ -1,7 +1,0 @@
-# contents: screen(1) system configuration.
-#
-# Copyright © 2006 Nikolai Weibull <now@bitwi.se>
-#
-# As screen users are quite picky by nature, don’t actually change anything
-# from the defaults, leaving this file empty except for this explanatory
-# comment.
