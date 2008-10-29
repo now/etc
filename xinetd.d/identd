@@ -1,8 +1,0 @@
-service auth
-{
-	socket_type 	= stream
-	wait		= no
-        only_from       = 0.0.0.0/0
-	user		= nobody
-	server		= /usr/sbin/in.identd
-}
