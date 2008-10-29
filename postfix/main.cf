@@ -5,3 +5,4 @@
 delay_warning_time = 4h
 relayhost = mail1.comhem.se
 home_mailbox = .maildir/
+mydomain = now.ath.cx
