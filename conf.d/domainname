@@ -1,6 +1,0 @@
-# Override DHCP setting.
-OVERRIDE=1
-
-DNSDOMAIN="pcp.ath.cx"
-
-NISDOMAIN=""
