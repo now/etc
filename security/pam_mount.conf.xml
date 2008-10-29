@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pam_mount>
+  <debug enable="0"/>
+  <mntoptions require="nosuid,nodev"/>
+  <volume
+    user="now"
+    fstype="crypt"
+    path="/dev/sda4"
+    mountpoint="~"
+    options="noatime,nodiratime"/>
+</pam_mount>
