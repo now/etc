@@ -57,8 +57,7 @@ ETCFILES ?= \
 	    postfix/master.cf \
 	    security/pam_mount.conf.xml \
 	    syslog-ng/syslog-ng.conf \
-	    xinetd.d/pure-ftpd \
-	    zsh/zshenv
+	    xinetd.d/pure-ftpd
 
 SECRETETCFILES ?= \
 		  denyhosts.conf
