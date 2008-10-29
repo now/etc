@@ -1,0 +1,17 @@
+auth		required	pam_env.so 
+auth            optional        pam_mount.so try_first_pass
+# TODO: Add this back once pam_ssh can simply be used for its session
+# management, not necessarily also its auth management.
+#auth            sufficient      pam_ssh.so try_first_pass
+auth		required	pam_unix.so try_first_pass likeauth nullok 
+ 
+account		required	pam_unix.so 
+ 
+password	required	pam_cracklib.so difok=2 minlen=8 dcredit=2 ocredit=2 try_first_pass retry=3 
+password	required	pam_unix.so try_first_pass use_authtok nullok md5 shadow 
+ 
+session		required	pam_limits.so 
+session		required	pam_env.so 
+session		required	pam_unix.so 
+session         optional        pam_mount.so
+#session         sufficient      pam_ssh.so
