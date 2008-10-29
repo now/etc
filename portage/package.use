@@ -1,55 +1,33 @@
-sys-apps/gawk xml
-sys-libs/glibc userlocales
-media-video/mplayer amr -gtk vorbis aalib libcaca mad xvid -oss cddb dvdnav ftp rar rtc srt vidix lame xscreensaver 3dnow 3dnowext
-media-sound/lame -gtk
-dev-util/git doc gitsendemail tcltk gtk
+app-editors/emacs-cvs m17n-lib xft -spell
 app-editors/vim vim-with-x
-media-libs/gd fontconfig
-media-libs/libwmf jpeg
-app-shells/zsh cap
-app-misc/beagle -gtk
-x11-libs/cairo glitz pdf
-mail-client/mutt smime
-app-crypt/gpgme smime
-net-im/bitlbee msn oscar
-net-irc/irssi perl
-dev-libs/libxml2 python
-www-client/mozilla-firefox mozdevelop mozbranding xforms
-dev-lang/ruby doc cjk
-app-editors/emacs-cvs -spell xft libotf m17n-lib
-app-cdr/cdrdao -gnome
-media-libs/win32codecs real
-dev-ruby/rails mysql sqlite3
-app-editors/emacs xft
-media-gfx/gimp aalib lcms svg
-media-sound/sox mad ogg
-app-text/evince dvi djvu -gnome
-media-sound/audacity mad vorbis
-app-text/docbook-sgml-utils tetex
-net-misc/neon expat
-dev-python/pycrypto gmp
-sys-fs/reiser4progs debug
-media-video/vlc aalib ffmpeg flac libcaca ogg screen stream vcd xml
-x11-terms/xterm paste64
-dev-java/blackdown-jre browserplugin mozilla nsplugin
-media-video/ffmpeg -oss
-media-sound/alsa-driver -oss
-media-plugins/gst-plugins -oss
-media-plugins/gst-plugins-base -oss
-app-emulation/wine -ldap
-app-text/djvu tiff
-net-misc/openssh -ldap
-net-fs/samba -ldap
-x11-libs/gtk+ tiff -vim-syntax
-dev-dotnet/libgdiplus tiff
-x11-drivers/ati-drivers opengl
-x11-base/xorg-server aiglx
-app-editors/gvim -gnome
-net-www/mplayerplug-in divx gmedia realmedia wmp
-x11-apps/xinit minimal
-sys-apps/pciutils -zlib
-gnome-base/gnome-mount -gnome
-sys-libs/pam -vim-syntax
+app-misc/beagle -eds -gtk -firefox
+app-text/djvu -kde
+app-text/evince djvu dvi t1lib
+dev-dotnet/libgdiplus exif
 dev-lang/ghc binary
-media-plugins/alsa-plugins ffmpeg jack libsamplerate
+dev-lang/ruby doc
+dev-libs/libxml2 python
+dev-python/pycrypto gmp
+dev-ruby/rails fastcgi
+dev-util/git curl doc subversion perl webdav -gtk
+games-emulation/xmame expat sdl
+media-gfx/gimp aalib curl exif mng
 media-gfx/imagemagick djvu fontconfig grahpviz
+media-libs/gd fontconfig
+media-libs/win32codecs real
+media-plugins/alsa-plugins ffmpeg libsamplerate
+media-plugins/gst-plugins-meta a52 theora
+media-sound/audacity libsamplerate
+media-sound/rhythmbox -cdr
+media-sound/sox ao ffmpeg flac libsamplerate
+media-video/ffmpeg a52 aac theora xvid
+media-video/mplayer 3dnow 3dnowext aac aalib bidi cddb cdparanoia enca ftp libcaca lzo md5sum mp2 nemesi rar real rtc srt vidix xvid -gtk
+net-analyzer/nmap -gtk
+net-ftp/pure-ftpd xinetd
+net-misc/neon expat
+net-misc/rdesktop ao
+sys-fs/reiser4progs debug
+www-servers/lighttpd fastcgi webdav
+x11-apps/xinit minimal
+x11-libs/cairo glitz xcb
+x11-terms/xterm paste64
