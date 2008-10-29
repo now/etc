@@ -39,7 +39,6 @@ ETCFILES ?= \
 	    X11/xorg.conf \
 	    asound.conf \
 	    conf.d/clock \
-	    conf.d/domainname \
 	    conf.d/net \
 	    defaults/cdrdao \
 	    etc-update.conf \
@@ -50,18 +49,14 @@ ETCFILES ?= \
 	    mail/aliases \
 	    make.conf \
 	    modules.d/alsa \
-	    pam.d/login \
-	    pam.d/sshd \
+	    pam.d/system-auth \
 	    portage/package.keywords \
 	    portage/package.unmask \
 	    portage/package.use \
 	    postfix/main.cf \
 	    postfix/master.cf \
-	    screenrc \
-	    security/pam_mount.conf \
+	    security/pam_mount.conf.xml \
 	    syslog-ng/syslog-ng.conf \
-	    xinetd.d/bitlbee \
-	    xinetd.d/identd \
 	    xinetd.d/pure-ftpd \
 	    zsh/zshenv
 
